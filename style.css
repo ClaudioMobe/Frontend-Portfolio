@@ -8,6 +8,7 @@ body{
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 a:link,a:visited{
     color: #eee;
@@ -55,18 +56,22 @@ a:active{
     justify-content: center;
     align-items: center;
     margin: auto;
+    transition: all 0.1s;
 }
 .enter-data{
     background: #2c2c42;
     width: 30%;
+    height: 165px;
     position: absolute;
-    top: 70px;
+    top: -100%;
     left: 70%;
+    z-index: 500;
     text-align: center;
     border-bottom-left-radius: 30px;
+    transition: top 1s;
 }
 .enter-data-title{
-    margin: 15px;
+    padding: 15px;
     font-size: 20px;
 }
 .enter-data-form{
@@ -104,6 +109,7 @@ a:active{
 }
 
 #login{
+    color: #eee;
     max-height: 45px;
     min-width: 100px;
     background: #363650;
@@ -123,6 +129,7 @@ a:active{
 #signup{
     max-height: 45px;
     min-width: 103px;
+    background: transparent;
     color: #31c41d;
     border: solid 3px #31c41d;
     padding: 10px 20px;
@@ -139,6 +146,8 @@ a:active{
 }
 
 #main{
+    position: relative;
+    top: 0;
     padding: 20px 50px;
     display: block;
     box-sizing: border-box;
@@ -225,7 +234,7 @@ a:active{
 .better{
     grid-area: 1/3/span 2/span 1;
     background: #3c7ca1;
-    color: #ccc;
+    color: #eee;
 }
 .better-txt{
     margin: 0;
@@ -240,6 +249,7 @@ a:active{
 
 
 #footer{
+    position: relative;
     margin: 50px;
     color: #ccc;
     display: grid;
